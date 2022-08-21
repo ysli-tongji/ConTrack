@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A dataset for Arabic Scene Text Detection and traffic sign detection in Highway">
+
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+    <title>ConTrack Distress Dataset: A Continuous Observation for Pavement Deterioration Spatio-temporal Analysis</title>
+
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158644654-1"></script> -->
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-158644654-1');
+	</script>
+
+  </head>
+
+  <body>
+
+  
+
+    <main role="main">
+
+      <div class="jumbotron">
+        <div class="container">
+          <h2 class="text-center ">ConTrack Distress Dataset: A Continuous Observation for Pavement Deterioration Spatio-temporal Analysis</h2>
+        </div>
+      </div>
+
+      <div class="container">
+
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="dataset-tab" data-toggle="tab" href="#dataset" role="tab" aria-controls="profile" aria-selected="false">Dataset</a>
+              </li>
+              <!-- <li class="nav-item">
+                  <a class="nav-link" id="demo-tab" data-toggle="tab" href="#demo" role="tab" aria-controls="profile" aria-selected="false">Demo</a>
+
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link" id="download-tab" data-toggle="tab" href="#download" role="tab" aria-controls="profile" aria-selected="false">Download</a>
+
+            </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <br>
+                <br>
+                <h4><b>ConTrack</b></h4>
+                <p>
+                    Analysis of pavement deterioration is critical for road maintenance. Many section-based pavement performance evaluation methodologies have been investigated to determine the deteriorating tendency from a macro perspective. However, little research shed light on the refined deterioration analysis for single distress, which is valuable for daily and preventive maintenance. This dataset is collected from over 270 kilometers of Chinese urban roads. It records the continuous tracking process of each distress. Meteorological information is also recorded. This dataset can be used not only to analyze the deterioration of the distress, but also a good choice for training the distress detection algorithm.                
+                </p>
+                  
+
+                  <h4><b>Examples of Annotated Images</b></h4>
+
+                  <div class="col">
+                      <div class="col"><img class="img-fluid" src="images/img1.png" alt="ConTrack Distress Dataset: A Continuous Observation for Pavement Deterioration Spatio-temporal Analysis"/></div>
+                      
+                      <div class="col"><img class="img-fluid" src="images/img2.png" alt="ConTrack Distress Dataset: A Continuous Observation for Pavement Deterioration Spatio-temporal Analysis"/></div>
+                  </div>
+
+                  <br>
+                  <br>
+                  
+                  
+                  
+
+                  <h4><b>Citation</b></h4>
+
+                  Our paper introduced the dataset and is published at the IEEE Transactions on Intelligent Transportation Systems 2022 and available <a href="https://ieeexplore.ieee.org/document/9233923" >here</a>.               
+
+                  If your research uses the ConTrack dataset, please cite our following paper:
+                  <br>
+                  <br>
+                  <pre>
+  @ARTICLE{9233923,
+          author={M. {Akallouch} and K. S. {Boujemaa} and A. {Bouhoute} and K. {Fardousse} and I. {Berrada}},
+          journal={IEEE Transactions on Intelligent Transportation Systems}, 
+          title={ASAYAR: A Dataset for Arabic-Latin Scene Text Localization in Highway Traffic Panels}, 
+          year={2020},
+          pages={1-11},
+          doi={10.1109/TITS.2020.3029451}} </pre>
+                 
+              </div>
+              <div class="tab-pane fade" id="dataset" role="tabpanel" aria-labelledby="dataset-tab">
+
+                <br>
+                <h4><b>Image Source and Usage License</b></h4>
+                <br>
+              
+                <p>The images in the dataset are collected from urban roads in China.
+                <br> All images and their associated annotations in ConTrack can be used for <b><i>academic purposes only, but any commercial use is prohibited.</i></b> <a href="https://vcar.github.io/ASAYAR/conditions">(read more)</a>  </p>
+               
+                
+                
+                <h4><b>Annotation format</b></h4>
+
+                <p>
+                  The following script shows an example of annotation:
+                </p>
+
+
+                
+<pre lang="xml" class="text-left">  
+  {
+    "Location": {
+        "Site name": " Site Name ",
+        "Road level": " Road Level "
+    },
+    "Distress_records": [
+        {
+            "site_num": Site Number,
+            "Img_name": " Image Name ",
+            "Dis_class": " Distress Class ",
+            "Bbox": "Bounding Box of Annotation",
+            "Col_time": "Collection Time",
+            "Min_tem": " Daily Minimum Temperature ",
+            "Max_tem": " Daily Maximum Temperature ",
+            "Humidity": " Daily Humidity ",
+            "Wind": " Average Daily Wind Speed ",
+            "Pressure": " Daily Mean Air Pressure ",
+            "Visibility": " Daily Visibility ",
+            "Precipitation": " Total Daily Precipitation ",
+            "Cloud": " Average Daily Cloud Cover "
+        }
+        …
+    ]
+}
+</pre>
+                
+
+<h4><b>Dataset structure</b></h4>
+
+                              
+<pre>  
+  ConTrack Distress Dataset/
+  ├── Images/
+  │   ├── 000033-2021-07-18_08-14-50-771.jpg
+  │   │   
+  │   └── ...
+  │
+  │       
+  ├── Annotation/
+      ├── 000001.json
+      │   
+      └── ...
+</pre>
+
+
+              </div>
+              <!-- <div class="tab-pane fade" id="demo" role="tabpanel" aria-labelledby="demo-tab">
+                  <div class="embed-responsive embed-responsive-16by9">
+                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/mJFiLlnoEWM" allowfullscreen></iframe>
+                    </div>
+
+                    <br>
+                    
+
+              </div> -->
+              <div class="tab-pane fade" id="download" role="tabpanel" aria-labelledby="download-tab">
+
+                <!-- <div class="embed-responsive embed-responsive-1by1">
+
+                <iframe class="embed-responsive-item" src="https://wj.qq.com/s2/10646434/069a/"  frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+             
+                </div> -->
+                <div class="embed-responsive embed-responsive-1by1">
+
+                <iframe height="1200" width="800" src="https://wj.qq.com/s2/10646588/285c/" frameborder="0" allowfullscreen sandbox="allow-same-origin allow-scripts allow-modals allow-downloads allow-forms allow-popups"></iframe>
+             
+                </div>
+              </div>
+
+              
+
+            </div>
+           
+
+
+            <hr class="style3">
+
+
+            <div >
+
+            <h4>Contact</h4>
+            <p>For any questions, comments, suggestions or feedback, do not hesitate to send us an e-mail :</p>
+
+            <ul >
+                <li><b>Yishun Li: </b> <a href="mailto:13liys@tongji.edu.cn">13liys@tongji.edu.cn</a></li>
+                <li><b>Chenglong Liu:</b> <a href="mailto:14lcl_tj@tongji.edu.cn">14lcl_tj@tongji.edu.cn</a></li>
+                <li><b>Yuchuan Du:</b> <a href="mailto:ycdu@tongji.edu.cn">ycdu@tongji.edu.cn</a></li>
+
+              </ul>
+
+
+              
+            <hr class="style3">
+              <h5 class="text-center">College of Transportation Engineering, Tongji University<br>
+                Research Team for Smart Transport Emerging computing and Perception<br>
+                <a href="http://www.steps.group/">http://www.steps.group</a></h5>
+
+            
+            </div>
+            <br>
+
+            <br>
+
+      
+      </div> <!-- /container -->
+
+
+     
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="assets/js/vendor/popper.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
